@@ -149,7 +149,7 @@ class BlogUI {
 
     render(filterTag = "") {
         this.blogList.innerHTML = this.blogManager.blogs
-            .filter(blog => !filterTag || blog.tags.some(tag => tag.startsWith(filterTag)))
+            .filter(blog => !filterTag || blog.tags.some(tag => tag.toLowerCase().startsWith(filterTag.toLowerCase())))
             .map(blog => `
                 <div class="blog-post">
                     <h2 class="blog-title">${blog.title}</h2>
