@@ -155,7 +155,7 @@ class BlogUI {
                     <h2 class="blog-title">${blog.title}</h2>
                     <div class="blog-date">อัปเดตเมื่อ: ${blog.getFormattedDate()}</div>
                     <div class="blog-content">${blog.content.replace(/\n/g, "<br>")}</div>
-                    <div class="blog-tags">แท็ก: ${blog.tags.join(", ")}</div>
+                    <div class="blog-tags">แท็ก: ${blog.tags.join(" , ")}</div>
                     <div class="blog-actions">
                         <button class="btn-edit" onclick="blogUI.editBlog(${blog.id})">แก้ไข</button>
                         <button class="btn-delete" onclick="blogUI.deleteBlog(${blog.id})">ลบ</button>
